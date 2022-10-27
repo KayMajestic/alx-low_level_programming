@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_line - prints a straight line
  * @n: the number of '_' to be printed
