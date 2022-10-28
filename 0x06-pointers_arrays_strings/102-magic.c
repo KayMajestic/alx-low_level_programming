@@ -1,4 +1,7 @@
 #include <stdio.h>
+/**
+ * @void: param
+ */
 int main(void)
 {
 	int n;
