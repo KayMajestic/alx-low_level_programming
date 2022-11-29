@@ -1,24 +1,18 @@
 #include "lists.h"
 /**
-* add_nodeint - add a new node at the beginning
-* of a linked list
-* @head: head of a list.
-* @n: n element.
-*
-* Return: address of the new element. NUll if it failed.
+* listint_len - length of linked list
+* @h: struct to go through
+* Return: amount of elements
 */
-listint_t *add_nodeint(listint_t **head, const int n)
+size_t listint_len(const listint_t *h)
 {
-	listint_t *new;
+	size_t count = 0;
 
-	new = malloc(sizeof(listint_t));
+	while (h != NULL)
+	{
+		count++;
+		h = h->next;
+	}
 
-	if (new == NULL)
-		return (NULL);
-
-	new->n = n;
-	new->next = *head;
-	*head = new;
-
-	return (*head);
+	return (count);
 }
